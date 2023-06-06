@@ -1,0 +1,144 @@
+/*Thomas Rice
+  5/31/2023
+  CS-135I-01
+*/
+
+$primary-color: #333;
+$secondary-color: #f5f5f5;
+$accent-color: #555;
+$grid-columns: 3;
+$grid-gap: 10px;
+$navbar-height: 60px;
+
+.navbar {
+  background-color: $secondary-color;
+  height: $navbar-height;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    li {
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      font-weight: bold;
+      font-size: 18px;
+      letter-spacing: 1px;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+.gallery_title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+  }
+}
+
+.grid_gallery {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-gap: $grid-gap;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+
+  .header-button {
+    background-color: #fff;
+    color: $primary-color;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+}
+
+main {
+  padding: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1500px;
+  text-align: center;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .main_blog {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1250px;
+    text-align: center;
+  }
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: $navbar-height - 20;
+  }
+}
